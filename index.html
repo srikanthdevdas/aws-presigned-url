@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="styles.css">
+	<!--<script type="text/javascript" src="configReqForm.js"></script>  -->
+    <title>HRP – Configuration Suite - Set up Requisition Form</title>    
+  </head>
+  <body>
+    <form name="config-form" class="signup-form" method="post" onsubmit="return validateform()">
+
+      <!-- form header -->
+      <div class="form-header">
+        <h1>HRP – Configuration Suite - Set up Requisition Form</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body"> 
+
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">First Name *</label>
+            <input type="text" id="firstname" class="form-input" placeholder="enter your first name" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last Name</label>
+            <input type="text" id="lastname" class="form-input" placeholder="enter your last name" />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email" class="label-title">Email*</label>
+          <input type="email" id="email" class="form-input" placeholder="enter your email" required="required">
+        </div>
+
+        <!-- Passwrod and confirm password -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="accountname" class="label-title">Account Name *</label>
+            <input type="text" id="accountname" class="form-input" placeholder="enter your account name" required="required">
+          </div>
+          <div class="form-group right">
+            <label for="projectmanger" class="label-title">Project Manager Name *</label>
+            <input type="text" class="form-input" id="projectmanger" placeholder="enter project manager name" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="reqdays" class="label-title">Duration of request in days (max 120 days allowed)*</label>
+          <input type="number" id="reqdays" min ="1" max="120" class="form-input" placeholder="enter duration in days" required="required">
+        </div>
+        <!--<div class="horizontal-group">  
+          <div class="form-group left">
+            <label for="ustlaptop" class="label-title">UST Laptop/Desktop ID *</label>
+            <input type="text" id="ustlaptop" class="form-input" placeholder="enter Laptop/Desktop ID" required="required">
+          </div>        
+          <div class="form-group right">
+            <label for="phone" class="label-title">Phone *</label>
+            <input type="text" pattern="[0-9]{10}"  class="form-input" id="phone" placeholder="enter phone" required="required">
+          </div>         
+        </div>
+        <div class="horizontal-group">          
+          <div class="form-group left">
+            <label for="macid" class="label-title">MAC ID *</label>
+            <input type="text" class="form-input" id="macid" placeholder="enter mac id" required="required">
+          </div>          
+        </div>  -->         
+      </div>
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn">Submit</button>
+      </div>
+
+    </form>
+
+    <!-- Script for range input label -->
+    <script>
+      var rangeLabel = document.getElementById("range-label");
+      var experience = document.getElementById("experience");
+
+      function change() {
+      rangeLabel.innerText = experience.value + "K";
+      }
+    </script>
+
+  </body>
+</html>
